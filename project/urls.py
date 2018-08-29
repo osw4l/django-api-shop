@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.views.generic import TemplateView
+
 from apps.utils import errors
 from .settings import local, base
 from rest_framework_swagger.views import get_swagger_view
@@ -33,6 +35,7 @@ urlpatterns = [
     url(r'^app/', include('apps.app.urls', namespace='app')),
 
     url(r'^$', schema_view),
+    url(r'^client/', TemplateView.as_view(template_name='index.html'))
 
 ] + static(base.MEDIA_URL, document_root=base.MEDIA_ROOT)
 
