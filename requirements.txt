@@ -12,7 +12,7 @@ django-material==1.1.1
 django-rest-auth==0.9.2
 django-smart-selects==1.5.2
 django-widget-tweaks==1.4.1
-djangorestframework==3.7.3
+djangorestframework==3.11.2
 gunicorn==19.7.1
 idna==2.6
 olefile==0.44
